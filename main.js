@@ -9,5 +9,14 @@ Distancia	  | Con SUBE registrada   | Con SUBE sin registrar
 */
 
 boton.addEventListener("click", () => {
-  // COMPLETAR
+  let SeleccionRegistro = document.getElementById('registrada').value;
+  let NumeroDistancia =  document.getElementById('distancia').value;
+  let ResultadoTarifa = document.getElementById('tarifa').innerText
+
+  if (SeleccionRegistro = "si") {
+    if (NumeroDistancia <= 3) {
+
+    }
+  }
+ 
 });
