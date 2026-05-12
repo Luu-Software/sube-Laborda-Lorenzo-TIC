@@ -11,12 +11,42 @@ Distancia	  | Con SUBE registrada   | Con SUBE sin registrar
 boton.addEventListener("click", () => {
   let SeleccionRegistro = document.getElementById('registrada').value;
   let NumeroDistancia =  document.getElementById('distancia').value;
-  let ResultadoTarifa = document.getElementById('tarifa').innerText
+  let ResultadoTarifa = document.getElementById('tarifa');
 
-  if (SeleccionRegistro = "si") {
-    if (NumeroDistancia <= 3) {
-
+  if (SeleccionRegistro === "si") {
+    if (NumeroDistancia <= 3){
+      ResultadoTarifa.innerText = 715.24
+    }
+    else if (NumeroDistancia >= 4 && NumeroDistancia <=6){
+      ResultadoTarifa.innerText = 794.74
+    }
+    else if (NumeroDistancia >= 7 && NumeroDistancia <=12){
+      ResultadoTarifa.innerText = 855.97
+    }
+    else if (NumeroDistancia >= 13 && NumeroDistancia <=27){
+      ResultadoTarifa.innerText = 917.24
+    }
+    else {
+      ResultadoTarifa.innerText = "Distancia incompatible"
+    }
+}
+  else {
+    if (NumeroDistancia <= 3){
+      ResultadoTarifa.innerText = 1137.23
+    }
+    else if (NumeroDistancia >= 4 && NumeroDistancia <=6){
+      ResultadoTarifa.innerText = 1263.64
+    }
+    else if (NumeroDistancia >= 7 && NumeroDistancia <=12){
+      ResultadoTarifa.innerText = 1360.99
+    }
+    else if (NumeroDistancia >= 13 && NumeroDistancia <=27){
+      ResultadoTarifa.innerText = 1458.41
+    }
+    else {
+      ResultadoTarifa.innerText = "Distancia incompatible"
     }
   }
+
  
 });
