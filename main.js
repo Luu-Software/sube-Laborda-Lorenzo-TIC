@@ -14,7 +14,7 @@ boton.addEventListener("click", () => {
   let ResultadoTarifa = document.getElementById('tarifa');
 
   if (SeleccionRegistro === "si") {
-    if (NumeroDistancia <= 3){
+    if (NumeroDistancia > 0 && NumeroDistancia <= 3){
       ResultadoTarifa.innerText = 715.24
     }
     else if (NumeroDistancia >= 4 && NumeroDistancia <=6){
