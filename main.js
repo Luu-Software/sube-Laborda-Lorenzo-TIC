@@ -30,23 +30,39 @@ boton.addEventListener("click", () => {
       ResultadoTarifa.innerText = "Distancia incompatible"
     }
 }
+else  if (SeleccionRegistro === "no"){
+  if (NumeroDistancia <= 3){
+    ResultadoTarifa.innerText = 1137.23
+  }
+  else if (NumeroDistancia >= 4 && NumeroDistancia <=6){
+    ResultadoTarifa.innerText = 1263.64
+  }
+  else if (NumeroDistancia >= 7 && NumeroDistancia <=12){
+    ResultadoTarifa.innerText = 1360.99
+  }
+  else if (NumeroDistancia >= 13 && NumeroDistancia <=27){
+    ResultadoTarifa.innerText = 1458.41
+  }
   else {
-    if (NumeroDistancia <= 3){
-      ResultadoTarifa.innerText = 1137.23
+    ResultadoTarifa.innerText = "Distancia incompatible"
+  }
+} 
+  // a partir de aca es de la consigna manija
+else if (SeleccionRegistro === "social") {
+  if (NumeroDistancia <= 3){
+      ResultadoTarifa.innerText = 339.18
     }
-    else if (NumeroDistancia >= 4 && NumeroDistancia <=6){
-      ResultadoTarifa.innerText = 1263.64
+  else if (NumeroDistancia >= 4 && NumeroDistancia <=6){
+      ResultadoTarifa.innerText = 376.88
     }
-    else if (NumeroDistancia >= 7 && NumeroDistancia <=12){
-      ResultadoTarifa.innerText = 1360.99
+  else if (NumeroDistancia >= 7 && NumeroDistancia <=12){
+      ResultadoTarifa.innerText = 405.91
     }
-    else if (NumeroDistancia >= 13 && NumeroDistancia <=27){
-      ResultadoTarifa.innerText = 1458.41
+  else if (NumeroDistancia >= 13 && NumeroDistancia <=27){
+      ResultadoTarifa.innerText = 434.97
     }
-    else {
+  else {
       ResultadoTarifa.innerText = "Distancia incompatible"
     }
   }
-
- 
 });
