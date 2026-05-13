@@ -12,8 +12,10 @@ boton.addEventListener("click", () => {
   let SeleccionRegistro = document.getElementById('registrada').value;
   let NumeroDistancia =  document.getElementById('distancia').value;
   let ResultadoTarifa = document.getElementById('tarifa');
+  let Ubicacion = document.getElementById('ubicacion').value
 
   if (SeleccionRegistro === "si") {
+    if (Ubicacion === "caba"){
     if (NumeroDistancia > 0 && NumeroDistancia <= 3){
       ResultadoTarifa.innerText = 715.24
     }
@@ -30,7 +32,45 @@ boton.addEventListener("click", () => {
       ResultadoTarifa.innerText = "Distancia incompatible"
     }
 }
+    else if (Ubicacion === 'nacional'){
+      if (NumeroDistancia > 0 && NumeroDistancia <= 3){
+        ResultadoTarifa.innerText = 700.00
+      }
+      else if (NumeroDistancia >= 4 && NumeroDistancia <=6){
+        ResultadoTarifa.innerText = 779.78
+      }
+      else if (NumeroDistancia >= 7 && NumeroDistancia <=12){
+        ResultadoTarifa.innerText = 839.86
+      }
+      else if (NumeroDistancia >= 13 && NumeroDistancia <=27){
+        ResultadoTarifa.innerText = 899.99
+      }
+      else {
+        ResultadoTarifa.innerText = "Distancia incompatible"
+      }
+    }
+  else if ( Ubicacion === 'provincia'){
+    if (NumeroDistancia > 0 && NumeroDistancia <= 3){
+      ResultadoTarifa.innerText = 968.57
+    }
+    else if (NumeroDistancia >= 4 && NumeroDistancia <=6){
+      ResultadoTarifa.innerText = 1089.64
+    }
+    else if (NumeroDistancia >= 7 && NumeroDistancia <=12){
+      ResultadoTarifa.innerText = 1210.71
+    }
+    else if (NumeroDistancia >= 13 && NumeroDistancia <=27){
+      ResultadoTarifa.innerText = 1452.85
+    }
+    else {
+      ResultadoTarifa.innerText = "Distancia incompatible"
+    }
+  }}
+
+
+
 else  if (SeleccionRegistro === "no"){
+  if (Ubicacion === 'caba'){
   if (NumeroDistancia <= 3){
     ResultadoTarifa.innerText = 1137.23
   }
@@ -45,9 +85,46 @@ else  if (SeleccionRegistro === "no"){
   }
   else {
     ResultadoTarifa.innerText = "Distancia incompatible"
+  }}
+  else if (Ubicacion === 'nacional'){
+    if (NumeroDistancia > 0 && NumeroDistancia <= 3){
+      ResultadoTarifa.innerText = 700.00
+    }
+    else if (NumeroDistancia >= 4 && NumeroDistancia <=6){
+      ResultadoTarifa.innerText = 779.78
+    }
+    else if (NumeroDistancia >= 7 && NumeroDistancia <=12){
+      ResultadoTarifa.innerText = 839.86
+    }
+    else if (NumeroDistancia >= 13 && NumeroDistancia <=27){
+      ResultadoTarifa.innerText = 899.99
+    }
+    else {
+      ResultadoTarifa.innerText = "Distancia incompatible"
+    }
   }
+else if ( Ubicacion === 'provincia'){
+  if (NumeroDistancia > 0 && NumeroDistancia <= 3){
+    ResultadoTarifa.innerText = 1937.14
+  }
+  else if (NumeroDistancia >= 4 && NumeroDistancia <=6){
+    ResultadoTarifa.innerText = 1089.64
+  }
+  else if (NumeroDistancia >= 7 && NumeroDistancia <=12){
+    ResultadoTarifa.innerText = 1210.71
+  }
+  else if (NumeroDistancia >= 13 && NumeroDistancia <=27){
+    ResultadoTarifa.innerText = 1452.85
+  }
+  else {
+    ResultadoTarifa.innerText = "Distancia incompatible"
+  }
+}
 } 
-  // a partir de aca es de la consigna manija
+
+
+
+// esto es de la consigna manija
 else if (SeleccionRegistro === "social") {
   if (NumeroDistancia <= 3){
       ResultadoTarifa.innerText = 339.18
